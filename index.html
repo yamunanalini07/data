@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+<style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+/* Navbar */
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:10px 80px;
+    background:lightgrey;
+    box-shadow:0 2px 10px rgba(0,0,0,0.05);
+    position:sticky;
+    top:0;
+    
+}
+
+nav h2{
+    color:#2563eb;
+    font-size: 35px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+
+}
+
+nav ul li{
+    margin-left:60px;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:#333;
+    font-weight:700;
+}
+
+nav ul li a:hover{
+    color:#2563eb;
+}
+.menu-btn{
+    display:flex;
+    font-size:28px;
+    cursor:pointer;
+}
+@media (max-width:768px){
+
+    nav{
+        padding:10px;
+    }
+
+    nav ul{
+        position:absolute;
+        top:50px;
+        left:400px;
+        width:300px;
+        background:lightgrey;
+        flex-direction:column;
+        text-align:center;
+        display:none; /* Hidden by default */
+        padding:40px 0;
+    }
+
+    nav ul li{
+        margin:15px 0;
+    }
+
+    nav ul.active{
+        display:flex; /* Show when active */
+    }
+
+    .menu-btn{
+        display:block;
+    }
+}
+
+
+/* About Section */
+.about {
+    padding: 40px;
+    background-color: #76c8ef;
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.about-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+/* Left */
+.about-left {
+    width: 30%;
+}
+
+/* Image */
+.about-image img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border: 10px solid white;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* Skills */
+.skills {
+    width: 30%;
+}
+
+.bar {
+    background: #ddd;
+    height: 20px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
+.progress {
+    height: 100%;
+    color: white;
+    text-align: right;
+    padding-right: 10px;
+    line-height: 20px;
+    border-radius: 20px;
+}
+.hit{
+    text-align: center;
+    color: black;
+    margin-top: 50px;
+    text-decoration: none;
+}
+ button{
+    padding: 18px 30px;
+    border: none;
+    background: #2563eb;
+    color: white;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: bold;
+    margin: 0 10px;
+    text-decoration: none;
+ }
+.p1 { width: 95%; background: #007bff; }
+.p2 { width: 80%; background: #007bff; }
+.p3 { width: 90%; background: #007bff; }
+</style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav>
+   <h2>DATAMEDAI</h2>
+
+
+    <ul id="menu">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Products</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+    <div class="menu-btn" id="menu-btn">&#9776;</div>
+
+</nav>
+
+<!-- About Section -->
+<section class="about">
+
+    <h1 class="title">ABOUT ME</h1>
+
+    <div class="about-container">
+
+        <!-- Left Side -->
+        <div class="about-left">
+            <h2>Boopesh</h2>
+            <p>
+                I am a full-time freelancer with expertise in Social Media Marketing,
+                Email Marketing and Lead Generation. I help businesses grow online.
+            </p>
+
+            <p>📍 karur, India</p>
+            <p>📞 +91 9876543210</p>
+            <p>✉ yourmail@gmail.com</p>
+        </div>
+
+        <!-- Center Image -->
+        <div class="about-image">
+            <img src="https://i.postimg.cc/nzqXL88y/person-3-removebg-preview.png" alt="profile">
+        </div>
+
+        <!-- Right Side Skills -->
+        <div class="skills">
+            <h2>My Professional Skills</h2>
+
+            <p>Social Media Marketing</p>
+            <div class="bar">
+                <div class="progress p1">95%</div>
+            </div>
+
+            <p>Email Marketing</p>
+            <div class="bar">
+                <div class="progress p2">80%</div>
+            </div>
+
+            <p>Lead Generation</p>
+            <div class="bar">
+                <div class="progress p3">90%</div>
+            </div>
+
+        </div>
+
+    </div>
+    <div class="hit">
+        <a href="ex1.html">
+    <button>Pervios page</button>
+    </a>
+<a href="ex3.html">
+    <button>Next Page</button>
+</a>
+</div>
+</section>
+<script>
+const menuBtn = document.getElementById("menu-btn");
+const menu = document.getElementById("menu");
+
+menuBtn.addEventListener("click", function(){
+    menu.classList.toggle("active");
+});
+</script>
+
+</body>
+</html>
